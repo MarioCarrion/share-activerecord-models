@@ -30,6 +30,6 @@ ActiveRecord::Schema.define(version: 20160227025125) do
     WHERE (products.price > 100);
   SQL
 
-  add_index "expensive_products", ["id"], name: "index_expensive_products_on_id", using: :btree
+  add_index "expensive_products", ["id"], name: "index_expensive_products_on_id", unique: true, using: :btree
 
 end
