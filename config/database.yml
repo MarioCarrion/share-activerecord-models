@@ -1,0 +1,14 @@
+default: &default
+  adapter: 'postgresql'
+  username: 'postgres'
+  password:
+  host: '127.0.0.1'
+  timeout:  5000
+
+development:
+  <<: *default
+  database: 'sharing_development'
+
+test:
+  <<: *default
+  database: 'sharing_test'

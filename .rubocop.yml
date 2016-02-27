@@ -1,0 +1,14 @@
+require: 'rubocop-rspec'
+
+AllCops:
+  TargetRubyVersion: 2.2
+  Exclude:
+    - 'db/schema.rb'
+    - 'share_activerecord_models.gemspec'
+    - 'spec/spec_helper.rb'
+
+Metrics/LineLength:
+  Max: 99
+
+Style/Documentation:
+  Enabled: false
