@@ -11,4 +11,3 @@ module ShareActiveRecordModels
     end
   end
 end
-
