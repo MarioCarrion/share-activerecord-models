@@ -4,12 +4,13 @@ This is a barebones repository describing how to use the **rails** gem for allow
 
 I like PostgreSQL, therefore I like scenic so make sure you have your daemon running and then:
 
-`rake db:create`
-`rake db:migrate`
-`rake db:test:prepare`
-`rspec`
+```
+rake db:create db:migrate db:test:prepare && rspec
+```
 
 Try using the regular generators:
 
-`rails generate migration CreateYolos`
-`rails generate scenic:view yolo_products --materialized`
+```
+rails generate migration CreateYolos
+rails generate scenic:view yolo_products --materialized
+```

@@ -2,7 +2,7 @@ default: &default
   adapter: 'postgresql'
   username: 'postgres'
   password:
-  host: '127.0.0.1'
+  host: 'database'
   timeout:  5000
 
 development:

@@ -1,0 +1,29 @@
+version: "2"
+services:
+  gem:
+    build: .
+    command: ./bin/docker_init.sh
+    volumes:
+      - .:/gem/
+    depends_on:
+      - database
+    links:
+      - database
+    volumes_from:
+      - bundle
+
+  database:
+    image: postgres:9.4
+    volumes_from:
+      - database_data
+    ports:
+      - 5432
+
+  database_data:
+    image: busybox
+    command: tail -f /dev/null
+
+  bundle:
+    image: busybox
+    volumes:
+      - ${PWD}/.gems/:/bundle/
