@@ -1,7 +1,10 @@
 language: ruby
 rvm:
   - 2.2.6
+addons:
+  postgresql: '9.4'
 env:
+  - DB=postgres
   global:
     - CC_TEST_REPORTER_ID=3c8605e638fea96641b940a99780ffe61c6c3e9307f49dfbf968eec8c2687737
 before_script:
