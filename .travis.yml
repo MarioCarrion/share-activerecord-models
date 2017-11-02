@@ -4,8 +4,8 @@ rvm:
 addons:
   postgresql: '9.4'
 env:
-  - DB=postgres
   global:
+    - DB=postgres
     - CC_TEST_REPORTER_ID=3c8605e638fea96641b940a99780ffe61c6c3e9307f49dfbf968eec8c2687737
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
