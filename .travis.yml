@@ -13,5 +13,5 @@ before_script:
 script:
   - gem install bundler --version=1.16.0 && bundle install
   - bundle exec rake db:create db:migrate db:test:prepare
-  - bundle exec rubocop && bundle exec rspec
+  - bundle exec rspec
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
